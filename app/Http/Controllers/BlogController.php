@@ -1,12 +1,16 @@
 <?php
 
+/*
+ * feat: style ci config
+ */
+
 namespace App\Http\Controllers;
 
-use Canvas\Tag;
+use Canvas\Events\PostViewed;
 use Canvas\Post;
+use Canvas\Tag;
 use Canvas\Topic;
 use Illuminate\View\View;
-use Canvas\Events\PostViewed;
 
 class BlogController extends Controller
 {
@@ -30,6 +34,7 @@ class BlogController extends Controller
      * Show a post given a slug.
      *
      * @param string $slug
+     *
      * @return View
      */
     public function findPostBySlug(string $slug): View
@@ -84,6 +89,7 @@ class BlogController extends Controller
      * Show all posts given a tag.
      *
      * @param string $slug
+     *
      * @return View
      */
     public function getPostsByTag(string $slug): View
@@ -108,6 +114,7 @@ class BlogController extends Controller
      * Show all posts given a topic.
      *
      * @param string $slug
+     *
      * @return View
      */
     public function getPostsByTopic(string $slug): View

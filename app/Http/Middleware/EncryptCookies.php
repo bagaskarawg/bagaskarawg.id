@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * feat: style ci config
+ */
+
 namespace App\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;

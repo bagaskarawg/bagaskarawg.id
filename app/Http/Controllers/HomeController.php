@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+/*
+ * feat: style ci config
+ */
 
-use Illuminate\Http\Request;
+namespace App\Http\Controllers;
 
 class HomeController extends Controller
 {

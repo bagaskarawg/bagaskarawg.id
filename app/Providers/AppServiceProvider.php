@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * feat: style ci config
+ */
+
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;

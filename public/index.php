@@ -1,10 +1,7 @@
 <?php
 
-/**
- * Laravel - A PHP Framework For Web Artisans
- *
- * @package  Laravel
- * @author   Taylor Otwell <taylor@laravel.com>
+/*
+ * feat: style ci config
  */
 
 define('LARAVEL_START', microtime(true));

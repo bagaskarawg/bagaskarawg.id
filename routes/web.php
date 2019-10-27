@@ -4,8 +4,8 @@
  * feat: style ci config
  */
 
-use Canvas\Tag;
 use Canvas\Post;
+use Canvas\Tag;
 use Canvas\Topic;
 use Inertia\Inertia;
 
@@ -14,7 +14,8 @@ Route::get('/', function () {
 
     $posts = Post::with('topic', 'user')->published()->orderByDesc('published_at')->limit(6)->get();
     $topics = Topic::withCount('posts')->limit(5)->orderByDesc('posts_count')->get(['name', 'slug']);
-    $tags   = Tag::withCount('posts')->limit(5)->orderByDesc('posts_count')->get(['name', 'slug']);
+    $tags = Tag::withCount('posts')->limit(5)->orderByDesc('posts_count')->get(['name', 'slug']);
+
     return view('welcome', compact('posts', 'topics', 'tags'));
 })->name('home');
 

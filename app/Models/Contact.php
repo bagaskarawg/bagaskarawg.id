@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * feat: style ci config
+ */
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;

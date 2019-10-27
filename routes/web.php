@@ -7,8 +7,11 @@
 use Canvas\Tag;
 use Canvas\Post;
 use Canvas\Topic;
+use Inertia\Inertia;
 
 Route::get('/', function () {
+    return Inertia::render('Index');
+
     $posts = Post::with('topic', 'user')->published()->orderByDesc('published_at')->limit(6)->get();
     $topics = Topic::withCount('posts')->limit(5)->orderByDesc('posts_count')->get(['name', 'slug']);
     $tags   = Tag::withCount('posts')->limit(5)->orderByDesc('posts_count')->get(['name', 'slug']);
@@ -16,6 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 Auth::routes();
+Route::resource('contacts', 'ContactsController')->only('store');
 
 Route::prefix('blog')->group(function () {
     Route::get('/', 'BlogController@getPosts')->name('blog.index');

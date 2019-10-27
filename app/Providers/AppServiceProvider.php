@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (! is_dir(config('view.compiled'))) {
+        if (!is_dir(config('view.compiled'))) {
             mkdir(config('view.compiled'), 0755, true);
         }
 
@@ -47,7 +47,7 @@ class AppServiceProvider extends ServiceProvider
         Inertia::share([
             'app' => function () {
                 return [
-                    'name' => config('app.name'),
+                    'name'      => config('app.name'),
                     'asset_url' => url(''),
                 ];
             },

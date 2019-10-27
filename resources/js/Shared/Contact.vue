@@ -51,7 +51,6 @@ import Vue from 'vue'
 import Block from './Block'
 import Mapbox from 'mapbox-gl'
 import VueSweetalert2 from 'vue-sweetalert2'
-import 'sweetalert2/dist/sweetalert2.min.css'
 import { MglMap, MglMarker, MglPopup } from 'vue-mapbox'
 
 Vue.use(VueSweetalert2, {

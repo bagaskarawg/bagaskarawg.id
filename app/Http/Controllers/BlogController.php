@@ -52,7 +52,7 @@ class BlogController extends Controller
             if ($post->tags->isNotEmpty()) {
                 $related = Post::where('id', '!=', $post->id)
                     ->where('id', '!=', optional($next)->id)
-                    ->whereHas('tags', function ($query) use ($post, $next) {
+                    ->whereHas('tags', function ($query) use ($post) {
                         return $query->whereIn('name', $post->tags->pluck('slug'));
                     })->get();
 
